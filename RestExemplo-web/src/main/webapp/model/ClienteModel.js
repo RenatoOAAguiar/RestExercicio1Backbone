@@ -1,11 +1,11 @@
 var ClienteModel = Backbone.Model.extend({
 
-    urlRoot : 'http://localhost:8080/RestExemplo-web/rest/cliente',
+    urlRoot : 'http://localhost:8080/RestExemplo-web/rest/cliente/inserirCliente',
 
     defaults : {
         nome: '',
         sobrenome: '',
-        idade : 0
+        idade : 1
     },
     
 });
