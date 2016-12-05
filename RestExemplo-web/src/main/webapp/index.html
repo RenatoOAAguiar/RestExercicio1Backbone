@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Teste</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-header">
+
+        <legend>
+            <h2 class="text-center text-success">Rest Teste</h2>
+        </legend>
+        <nav class="navbar navbar-form" role="navigation"></nav>
+
+    </div>
+
+    <div id="dados" class="container-fluid">
+
+        <form class="form-horizontal">
+        <div class="row-fluid">
+        <div class="form-group">
+        <div class="control-group">
+            <label class="col-sm-1 control-label" for="nomeCliente">
+                Nome:
+            </label>
+            <div class="col-sm-3">
+                <input type="text"  id="nomeCliente" class="input-sm form-control"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="col-sm-1 control-label" for="sobrenomeCliente">
+                Sobrenome:
+            </label>
+            <div class="col-sm-7">
+                <input type="text"  id="sobrenomeCliente" class="input-sm form-control"/>
+            </div>
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="control-group">
+            <label class="col-sm-1 control-label" for="idadeCliente">
+                Idade:
+            </label>
+            <div class="col-sm-3">
+                <input type="number"  id="idadeCliente" class="input-sm form-control"/>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <button type="button" id="btnAlterar" class="btn btn-secundary" style="display: none" title="Alterar">Alterar</button>
+		<button type="button" id="btnSalvar" class="btn btn-primary" title="Salvar" >Salvar</button>
+    </div>
+</form>
+    </div>
+
+    <footer class="navbar-fixed-bottom">
+        <div class="container-fluid">
+            <legend>
+            <h2 class="text-nowrap">Fim</h2>
+            </legend>
+        </div>
+    </footer>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap-3.3.7.min.js"></script>
+    <script src="js/underscore-1.8.3.js"></script>
+    <script src="js/backbone-min.js"></script>
+
+    <script type="text/javascript" src="model/ClienteModel.js"></script>
+    <script type="text/javascript" src="view/ClienteView.js"></script>
+</body>
+
+</html>

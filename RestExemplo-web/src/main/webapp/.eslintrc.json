@@ -1,0 +1,14 @@
+{
+    "extends": "standard",
+	"extends": "plugin:backbone/recommended",
+    "installedESLint": true,
+	"unused":true,
+    "plugins": [
+        "standard",
+        "promise",
+		"backbone",
+		"jquery"
+    ]
+
+
+}

@@ -1,0 +1,28 @@
+{
+   "name": "teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenatoOAAguiar/exercicio1BB"
+  },
+  "author": "Renato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenatoOAAguiar/exercicio1BB/issues"
+  },
+  "homepage": "https://github.com/RenatoOAAguiar/exercicio1BB#readme",
+  
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-backbone": "^2.0.2",
+    "eslint-plugin-jquery": "^1.0.1",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
