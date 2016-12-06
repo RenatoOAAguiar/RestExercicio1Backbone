@@ -1,6 +1,8 @@
 var ClienteModel = Backbone.Model.extend({
 
-    urlRoot : 'http://localhost:8080/RestExemplo-web/rest/cliente/inserirCliente',
+    urlRoot : 'rest/cliente',
+
+    template : '',
 
     defaults : {
         nome: '',
@@ -11,5 +13,6 @@ var ClienteModel = Backbone.Model.extend({
 });
 
 var ClienteModelCollection = Backbone.Collection.extend({
-    model: ClienteModel    
+    model: ClienteModel,
+    url: '/rest/cliente'
 });

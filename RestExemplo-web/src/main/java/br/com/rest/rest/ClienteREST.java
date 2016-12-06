@@ -53,7 +53,7 @@ public class ClienteREST {
 	}
 
 	@POST
-	@Path("/inserirCliente")
+//	@Path("/inserirCliente")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public void inserirCliente(Cliente cliente) {
@@ -61,7 +61,7 @@ public class ClienteREST {
 	}
 
 	@DELETE
-	@Path("/removerCliente")
+//	@Path("/removerCliente")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public void removerCliente(Cliente cliente) {

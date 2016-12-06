@@ -1,18 +1,48 @@
 var ClienteView = Backbone.View.extend({
 
     events:{
-        'click #btnSalvar' : 'salvar'
+        'click #btnSalvar' : 'salvar',
+        'click #btnListar' : 'abrirListView'
     },
 
-    salvar: function salvar(){
+    initialize: function(){
+        var that = this;
+        _.bindAll(this);
+        $.get('templates/ClienteView.html', function (data) {
+            that.template = _.template(data);
+            //that.$el.html(that.template());  
+        }, 'html');
+        that.render();
+    },
+
+    render : function(){
+        this.inicializaModel();
+        this.$el.html(this.template(this.model.toJSON()));
+        return this;
+    },
+
+    salvar : function salvar(){
         this.model.set("nome", $('#nomeCliente').val());
         this.model.set("sobrenome", $('#sobrenomeCliente').val());
         this.model.set("idade", $('#idadeCliente').val());
+        this.model.set("listClientes", {});
         this.model.save(null,{
             success: function(model,response){
                 console.log(model);
                 alert("Sucesso");
+                $('#btnListar').show();
             }
+        });
+    },
+
+    inicializaModel : function inicializaModel(){
+        this.model = new ClienteModel();
+    },
+
+    abrirListView : function abrirListView(){
+        var that = this;
+        $.get('view/ClienteListView.js', function (data) {
+            clienteListView = new ClienteListView({ el : $('#resultado'), model : that.model });
         });
     }
 });
