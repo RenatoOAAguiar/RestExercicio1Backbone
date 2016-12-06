@@ -2,8 +2,6 @@ var ClienteModel = Backbone.Model.extend({
 
     urlRoot : 'rest/cliente',
 
-    template : '',
-
     defaults : {
         nome: '',
         sobrenome: '',
@@ -14,5 +12,5 @@ var ClienteModel = Backbone.Model.extend({
 
 var ClienteModelCollection = Backbone.Collection.extend({
     model: ClienteModel,
-    url: '/rest/cliente'
+    url: 'rest/cliente'
 });

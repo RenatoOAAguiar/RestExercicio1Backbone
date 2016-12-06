@@ -7,17 +7,16 @@ var ClienteView = Backbone.View.extend({
 
     initialize: function(){
         var that = this;
-        _.bindAll(this);
         $.get('templates/ClienteView.html', function (data) {
             that.template = _.template(data);
-            //that.$el.html(that.template());  
+            that.$el.html(that.template());  
         }, 'html');
-        that.render();
+            //that.render();
     },
 
     render : function(){
         this.inicializaModel();
-        this.$el.html(this.template(this.model.toJSON()));
+        this.$el.html(this.template);
         return this;
     },
 
@@ -25,7 +24,6 @@ var ClienteView = Backbone.View.extend({
         this.model.set("nome", $('#nomeCliente').val());
         this.model.set("sobrenome", $('#sobrenomeCliente').val());
         this.model.set("idade", $('#idadeCliente').val());
-        this.model.set("listClientes", {});
         this.model.save(null,{
             success: function(model,response){
                 console.log(model);
