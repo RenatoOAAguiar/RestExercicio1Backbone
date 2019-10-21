@@ -18,7 +18,7 @@
   "homepage": "https://github.com/RenatoOAAguiar/exercicio1BB#readme",
   
   "devDependencies": {
-    "eslint": "^3.7.1",
+    "eslint": "^6.5.1",
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-backbone": "^2.0.2",
     "eslint-plugin-jquery": "^1.0.1",
